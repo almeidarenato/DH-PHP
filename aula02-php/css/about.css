@@ -1,0 +1,212 @@
+/* -- General Area Begin -- */
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;    
+} 
+/* -- General Area End -- */
+
+/* -- Header Area Begin -- */
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+header a:hover {
+    color: #5f4a90;
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 #676565;
+}
+
+header .logo-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .logo-content img {
+    width: 10%;
+}
+
+header .container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+header .container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .container ul li {
+    list-style: none;
+}
+
+header .container ul .toggle-menu {
+    color: purple;
+    display: none;
+}
+/* -- Header Area End -- */
+
+/* -- About Area Begin -- */
+.about-content .about-banner {
+    height: 40%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-image: url('../img/about-banner.jpg');
+    background-size: cover;
+}
+  
+.about-content .about-banner h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+}
+  
+.about-content .about-item {
+    background-color: #fff;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.about-content .about-item video {
+    width: 35%;
+    height: 45vh;
+    object-fit: cover;
+}
+  
+.about-content .about-item article {
+    width: 60%;
+}
+  
+.about-content .about-item p {
+    margin-top: 1%;
+    text-align: justify;
+}
+  
+.about-content .about-item-2 {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f4;
+    border-top: #dcdcdc solid 1px;
+}
+  
+.about-content .about-item-2 p {
+    margin-bottom: 1%;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+/* -- About Area End -- */
+
+/* -- Footer Area Begin -- */
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #5f4a90;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -- Footer Area End -- */
+
+/* -- Media Queries Area Begin -- */
+@media only screen and (max-width: 540px){
+    
+    html {
+        width: 100vw;
+    }
+    
+    header {
+        z-index: 2;
+        height: 10vh;
+    }
+    
+    header .container {
+        width: 50%;
+    }
+    
+    header .container ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    
+    header .container ul li:not(.toggle-menu) {
+        display: none;
+    }
+    
+    header .container ul .toggle-menu {
+        display: block;
+        font-size: 1.3em;
+    }
+    
+    header .logo-content {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    header .logo-content img {
+        width: 20%;
+    }
+    
+    .about-content .about-item article h2 {
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    footer {
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 545px) and (max-width: 960px) {
+    header {
+        z-index: 3;
+        padding: 20px;
+        font-size: 1.3em;
+    }
+    
+    header .container {
+        margin-right: 5%;
+    }
+    
+    .contact-content {
+        margin: 15% auto 10%;
+        width: 50vw;
+    }
+}
+/* -- Media Queries Area Begin -- */
+
+/* -- All Buttons -- */
+.home-content .image-banner button:hover, .products-content div button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #5f4a90;
+}
+/* -- All Buttons End -- */

@@ -1,0 +1,251 @@
+/* -- General Area Begin -- */
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;    
+} 
+
+body.contact-body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+}
+/* -- General Area End -- */
+
+/* -- Header Area Begin -- */
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 #676767;
+}
+
+header .logo-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+header .logo-content img {
+    width: 10%;
+}
+  
+header .container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+header .container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+  
+header .container ul li {
+    list-style: none;
+}
+  
+header .container ul .toggle-menu {
+    display: none;
+}
+  
+.container ul li a {
+    text-decoration: none;
+    color: #000;
+}
+  
+.container ul li a:hover {
+    text-decoration: underline;
+    color: #5f4a98;
+}  
+/* -- Header Area End -- */
+
+/* -- Contact Area End -- */
+.contact-content {
+    margin: 8% auto 4%;
+    width: 40%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+    border: 1px solid #5f4a90;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-content .contact-title {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content form input, textarea {
+    width: 85%;
+    height: 5vh;
+    margin-bottom: 1%;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+    border: 1px solid #5f4a90;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.contact-content form textarea {
+    height: 20vh;
+}
+
+.contact-content form label {
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 1%;
+    font-size: 1em;
+}
+
+.contact-content form .contact-item {
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.contact-content form .contact-item input {
+    width: 10%;
+    height: 25%;
+}
+
+.contact-content form .contact-item label {
+    width: 60%;
+    margin: 0%;
+}
+
+.contact-content form .contact-item button {
+    width: 50%;
+    height: 70%;
+    background-color: #5f4a90;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.4em;
+    outline: none;
+}
+/* -- Contact Area End -- */
+
+/* -- Footer Area Begin -- */
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #5f4a90;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -- Footer Area End -- */
+
+/* -- Media Queries Area Begin -- */
+@media only screen and (max-width: 540px){
+    
+    body {
+        width: 100vw;
+    }
+    
+    header {
+        z-index: 2;
+        height: 10vh;
+    }
+    
+    header .container {
+        width: 50%;
+    }
+    
+    header .container ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    
+    header .container ul li {
+        display: none;
+    }
+    
+    header .container ul .toggle-menu {
+        display: block;
+        font-size: 1.3em;
+    }
+    
+    header .logo-content {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    header .logo-content img {
+        width: 20%;
+    }    
+    
+    .contact-content{
+        height: 75vh;
+        width: 80%;
+        margin: 22% auto 4%;
+    }
+    
+    .contact-content .contact-item label {
+        font-size: 0.8em;
+    }
+
+    footer {
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 545px) and (max-width: 960px) {
+    header {
+        z-index: 3;
+        padding: 20px;
+        font-size: 1.3em;
+    }
+    
+    header .container {
+        margin-right: 5%;
+    }
+    
+    .contact-content {
+        margin: 15% auto 10%;
+        width: 50vw;
+    }
+}
+/* -- Media Queries Area Begin -- */
+
+/* -- All Buttons -- */
+.contact-content form .contact-item button:hover {
+    background-color: #fff;
+    border: 1px solid #5f4a90;
+    color: #000;
+    cursor: pointer;
+}
+/* -- All Buttons End -- */
