@@ -1,0 +1,5 @@
+.thumbnail a>img,
+.thumbnail>img {
+  width: 500px;
+  height: 300px;
+}
