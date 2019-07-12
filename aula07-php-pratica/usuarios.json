@@ -6,6 +6,12 @@
       "email": "fulanodetal@gmail.com",
       "senha": "123"
     },
-    { "nome": "Renato", "email": "renatoam@ymail.com", "senha": "123" }
+    { "nome": "Renato", "email": "renatoam@ymail.com", "senha": "123" },
+    {
+      "nome": "Rodrigo",
+      "email": "rodrigo.almeida@hotmail.com",
+      "senha": "1234"
+    },
+    { "nome": "Sierra", "email": "sierra@hotmail.com", "senha": "1234" }
   ]
 }
