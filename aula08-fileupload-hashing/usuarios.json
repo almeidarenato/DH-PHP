@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "nome": "Renato",
+      "email": "renatoam@ymail.com",
+      "senha": "renato",
+      "imagem": "assets/img/uploads/cv.jpg"
+    },
+    {
+      "nome": "Renato",
+      "email": "renatoam@ymail.com",
+      "senha": "$2y$10$5I/YSjBsX4n6kCPMYDiWzePmDG7dmYOhVNa2yC1a5t73jcYPmkNfC",
+      "imagem": "assets/img/uploads/cv.jpg"
+    },
+    {
+      "nome": "Renato",
+      "email": "renato123@ymail.com",
+      "senha": "$2y$10$HoXc68lvxN4vtI8yRps0jOfw9DSvOoR.uU0tzbcwuBv0Qs6s8H7f.",
+      "imagem": "assets/img/uploads/cv.jpg"
+    },
+    {
+      "nome": "Renato",
+      "email": "re@re.com",
+      "senha": "$2y$10$3NCjTa.FbAvLjT7L.i1wP.Ejf67AZbpZqRGIDzqbG9fbyAhnMDKLW",
+      "imagem": "assets/img/uploads/cv.jpg"
+    },
+    {
+      "nome": "Renato",
+      "email": "renato456@renato.com",
+      "senha": "$2y$10$cD2yrb9KqSO/8dU9hKbhCuiLzvTpUMOUac7cKLjPkE7t/lSgLaYaG",
+      "imagem": "assets/img/uploads/cv.jpg"
+    }
+  ]
+}
