@@ -28,7 +28,7 @@ $jsonArquivos = json_decode($jsonArquivos, true);
       <?php foreach ($jsonArquivos['arquivos'] as $arquivo) : ?>
         <tr>
           <td><?= $arquivo['fileName'] ?></td>
-          <td><a href="<?= $arquivo['link'] ?>"> <?= $arquivo['link'] ?></td>
+          <td><a href="<?= $arquivo['link'] ?>" download> <?= $arquivo['link'] ?></td>
         </tr>
       <?php endforeach ?>
     </tbody>
