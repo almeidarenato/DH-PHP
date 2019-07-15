@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+
+$jsonArquivos = file_get_contents('arquivos.json');
+$jsonArquivos = json_decode($jsonArquivos, true);
+
+
+?>
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +17,22 @@
 </head>
 
 <body>
-
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Arquivo</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($jsonArquivos['arquivos'] as $arquivo) : ?>
+        <tr>
+          <td><?= $arquivo['fileName'] ?></td>
+          <td><a href="<?= $arquivo['link'] ?>"> <?= $arquivo['link'] ?></td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
 </body>
 
 </html>

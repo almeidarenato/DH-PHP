@@ -1,4 +1,23 @@
 <?php
+$jsonName = 'arquivos.json';
+function cadastrarArquivo($arquivo)
+{
+  //pega o arquivo Json arquivos.json
+  global $jsonName;
+  //coleta as informações 
+  $jsonArquivos = file_get_contents($jsonName);
+  //decodifica arquivo
+  $arrayArquivos = json_decode($jsonArquivos, true);
+  //adiciona novo link no arquivo json
+  array_push($arrayArquivos['arquivos'], $arquivo);
+  // codifica novamente o arquivo json
+  $jsonArquivos = json_encode($arrayArquivos, JSON_UNESCAPED_SLASHES);
+
+  $cadastrou = file_put_contents($jsonName, $jsonArquivos);
+
+  //retorna o arquivo.
+  return $cadastrou;
+}
 
 if ($_FILES) {
   if ($_FILES["arquivo"]["error"] == UPLOAD_ERR_OK) {
@@ -13,6 +32,12 @@ if ($_FILES) {
       echo 'Arquivo já existe';
 
     move_uploaded_file($nomeArquivoTemp, $caminhoCompleto);
+    $novoArquivo = [
+      "fileName" => $nomeArquivo,
+      "link" => $caminhoPastas . $nomeArquivo
+    ];
+
+    $cadastrou = cadastrarArquivo($novoArquivo);
   } else {
     echo "Erro de Upload";
   }
