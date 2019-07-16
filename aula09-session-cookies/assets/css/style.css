@@ -1,0 +1,24 @@
+.thumbnail a > img,
+.thumbnail > img {
+  height: 300px;
+  width: 600px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+}
