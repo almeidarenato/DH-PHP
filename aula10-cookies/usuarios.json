@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nome": "Renato",
+      "email": "renatoam@ymail.com",
+      "senha": "$2y$10$h7gces5kA78b.l7mzYS6BOuZqbAcWa0msn7EY5TZGwnM42HAAL51S",
+      "imagem": "",
+      "nivelAcesso": 1
+    },
+    {
+      "nome": "Renato2",
+      "email": "renatoam2@ymail.com",
+      "senha": "$2y$10$ixN0ArGAHVE2VNpNbhE2yeRvtvQZKa9oLbUy1SD1BVX33OWtYINpC",
+      "imagem": "",
+      "nivelAcesso": 1
+    },
+    {
+      "nome": "Renato3",
+      "email": "renatoam@gmail.com",
+      "senha": "$2y$10$7pzWiNM3nDFy3ncDTnUtu.b3VSn8kLA761IIZFqsxOVwZNhwl40nK",
+      "imagem": "",
+      "nivelAcesso": 1
+    }
+  ]
+}

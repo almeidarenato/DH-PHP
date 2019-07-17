@@ -31,9 +31,9 @@ $nivelAcesso = $_SESSION['nivelAcesso'];
                 <p class="navbar-text navbar-right">
                     Logado como
                     <strong>
-                        <?php echo $nomeUsuario ?>
+                        <?php echo $nomeUsuario ?></a>
                     </strong>
-
+                    <a href="inc/logout.php" class='btn btn-danger'>Logout</a>
                 </p>
             </div>
         </div>
