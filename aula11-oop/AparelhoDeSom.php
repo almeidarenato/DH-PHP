@@ -4,8 +4,8 @@ require_once("Equipamento.php");
 require_once("Pendrive.php");
 class AparelhoDeSom extends Equipamento
 {
-  public $volume;
-  public $numeroDeFaixa;
+  private $volume;
+  private $numeroDeFaixa;
   public $usb;
 
   public function __construct()
