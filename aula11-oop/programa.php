@@ -4,7 +4,7 @@ require_once("Pendrive.php");
 require_once("AparelhoDeSom.php");
 
 //instanciar
-$pendrive = new Pendrive();
+$pendrive = new Pendrive("Cruzer Blade");
 $aspiradorDePo = new AspiradorDePo();
 $aparelhoDeSom = new AparelhoDeSom();
 
@@ -31,7 +31,20 @@ echo "</ul>";
 echo "<br>";
 echo "<hr>";
 $aparelhoDeSom->ligar();
-$aparelhoDeSom->conectar("Cruzer Blade 8 gb");
+$aparelhoDeSom->conectar($pendrive);
+$aparelhoDeSom->reproduzir();
+
+// avança retrocede
+$aparelhoDeSom->avancarFaixa();
+$aparelhoDeSom->avancarFaixa();
+$aparelhoDeSom->avancarFaixa();
+$aparelhoDeSom->avancarFaixa();
+$aparelhoDeSom->retornarFaixa();
+$aparelhoDeSom->retornarFaixa();
+$aparelhoDeSom->retornarFaixa();
+$aparelhoDeSom->retornarFaixa();
+
+// volume
 $aparelhoDeSom->aumentarVolume(12);
 $aparelhoDeSom->aumentarVolume(19);
 $aparelhoDeSom->diminuirVolume(5);

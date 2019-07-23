@@ -2,7 +2,7 @@
 //
 abstract class Equipamento
 {
-  public $ligado;
+  protected $ligado;
 
   public function ligar()
   {
