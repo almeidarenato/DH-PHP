@@ -2,17 +2,19 @@
 
 //Defino variáveis privadas para a classe Cliente
 
-Class Cliente{
-  Private $nome;
-  Private $sobrenome;
-  Private $documento;
-  Private $nascimento;
-  Private $email;
-  Private $pass;
+abstract class Cliente
+{
+  private $nome;
+  private $sobrenome;
+  private $documento;
+  private $nascimento;
+  private $email;
+  private $pass;
 
-//Crio uma função construtora com os parâmetros necessários
+  //Crio uma função construtora com os parâmetros necessários
 
-  public function __construct($nome,$sobrenome,$documento,$nascimento,$email,$pass){
+  public function __construct($nome, $sobrenome, $documento, $nascimento, $email, $pass)
+  {
     $this->nome = $nome;
     $this->sobrenome = $sobrenome;
     $this->documento = $documento;
@@ -23,41 +25,52 @@ Class Cliente{
 
   //Crio funções públicas para definir o valor passado como parâmetro, ao executar a função construtura, como valor da propriedade do objeto instanciado
 
-  public function setnome($nome){
+  public function setnome($nome)
+  {
     $this->nome = $nome;
   }
-  public function getnome(){
+  public function getnome()
+  {
     return $this->nome;
   }
-  public function setsobrenome($sobrenome){
+  public function setsobrenome($sobrenome)
+  {
     $this->sobrenome = $sobrenome;
   }
-  public function getsobrenome(){
+  public function getsobrenome()
+  {
     return $this->sobrenome;
   }
-  public function setDocumento($documento){
+  public function setDocumento($documento)
+  {
     $this->documento = $documento;
   }
-  public function getDocumento(){
+  public function getDocumento()
+  {
     return $this->documento;
   }
-  public function setnascimento($nascimento){
+  public function setnascimento($nascimento)
+  {
     $this->nascimento = $nascimento;
   }
-  public function getnascimento(){
+  public function getnascimento()
+  {
     return $this->nascimento;
   }
-  public function setEmail($email){
+  public function setEmail($email)
+  {
     $this->email = $email;
   }
-  public function getEmail(){
+  public function getEmail()
+  {
     return $this->email;
   }
-  public function setPass($pass){
+  public function setPass($pass)
+  {
     $this->pass = $pass;
   }
-  public function getPass(){
+  public function getPass()
+  {
     return $this->pass;
   }
-
-  }
+}
