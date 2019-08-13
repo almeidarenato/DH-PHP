@@ -2,19 +2,42 @@
 <html lang="en">
 <?php require_once("inc/head.php"); ?>
 
+
 <body>
-  <?php require_once("inc/header.php") ?>
+  <?php
+  session_start();
+  if ($_SESSION["logado"]) {
+    $logado = $_SESSION["logado"];
+    $usuario = $_SESSION["nome"];
+    $nivel_acesso = $_SESSION["nivel_acesso"];
+
+
+    if (!$logado) {
+      header("Location: index.php");
+    }
+
+    if ($nivel_acesso == 1) {
+      $active = "admin";
+    } else {
+      $active = "redator";
+    }
+  } else {
+    echo "falha no login";
+  }
+  ?>
+  <?php
+  require_once("inc/header.php") ?>
 
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/img/free-delivery.jpg" alt="Primeiro Slide">
+        <img class="d-block w-100" src="img/free-delivery.jpg" alt="Primeiro Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/motoboy-delivery.jpg" alt="Segundo Slide">
+        <img class="d-block w-100" src="img/motoboy-delivery.jpg" alt="Segundo Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/uber-eats.jpg" alt="Terceiro Slide">
+        <img class="d-block w-100" src="img/uber-eats.jpg" alt="Terceiro Slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -33,7 +56,7 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At animi quasi recusandae culpa optio delectus excepturi quibusdam quae mollitia hic! Maiores, enim iste? Ipsam, nobis! Earum laudantium fugiat reiciendis similique!</p>
       <div class="card-deck">
         <div class="card">
-          <img class="card-img-top" src="assets/img/free-delivery.jpg" alt="Imagem de capa do card">
+          <img class="card-img-top" src="img/free-delivery.jpg" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title">Título do card</h5>
             <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
@@ -41,7 +64,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="assets/img/motoboy-delivery.jpg" alt="Imagem de capa do card">
+          <img class="card-img-top" src="img/motoboy-delivery.jpg" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title">Título do card</h5>
             <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -49,7 +72,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="assets/img/uber-eats.jpg" alt="Imagem de capa do card">
+          <img class="card-img-top" src="img/uber-eats.jpg" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title">Título do card</h5>
             <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>

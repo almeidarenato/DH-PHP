@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once("inc/head.php"); ?>
+<?php
+session_start();
+if ($_SESSION) {
+  $logado = $_SESSION['logado'];
+  $nivel_acesso = $_SESSION['nivel_acesso'];
+  if (!$logado || $nivel_acesso != 1) {
+    header("Location: index.php");
+  }
+}
+?>
 
 <body>
   <?php require_once("inc/header.php") ?>
